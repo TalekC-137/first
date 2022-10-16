@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+
+    <style>
+        pre.color_frame {
+            padding-right: 5%;
+            color:  rgb(180, 23, 153);
+            margin-bottom: 10px;
+            margin-top: 10px;
+            width: 50%;
+            border: 3px solid red;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h3>
+        Java
+    </h3>
+<p> Java (wym. dżawa[4]) - współbieżny, oparty na klasach, obiektowy język programowania ogólnego zastosowania[5].
+     Został stworzony przez grupę roboczą pod kierunkiem Jamesa Goslinga z firmy Sun Microsystems.
+      Java jest językiem tworzenia programów źródłowych kompilowanych do kodu bajtowego, czyli postaci wykonywanej 
+      przez maszynę wirtualną. Język cechuje się silnym typowaniem. Jego podstawowe koncepcje zostały przejęte z 
+      języka Smalltalk (maszyna wirtualna, zarządzanie pamięcią) oraz z języka C++ (duża część składni i słów kluczowych).
+      </p>
+
+
+      <div  > </div><pre class="color_frame"><span></span><span >// oznacza komentarz</span>
+        <span >// w tej postaci to obiekt reprezentujący kolorowy punkt</span>
+        <span>public</span> <span >class</span> <span >Figura</span>
+        <span >{</span>
+            <span >// operacje (metody)</span>
+            <span >public</span> <span >float</span> <span >obliczPole</span><span >()</span>
+            <span >{</span>
+                <span >return</span> <span >0</span><span >;</span>
+            <span >}</span>
+        
+            <span c>public</span> <span >float</span> <span >obliczObwód</span><span >()</span>
+            <span >{</span>
+                <span >return</span> <span >0</span><span >;</span>
+            <span >}</span>
+        
+            <span >public</span> <span >void</span> <span >wyświetl</span><span >()</span> <span >{</span> <span >...</span> <span >}</span>
+        
+            <span >// właściwości (atrybuty/pola)</span>
+            <span >private</span> <span >float</span> <span >środekX</span><span >;</span>
+            <span >private</span> <span >float</span> <span >środekY</span><span >;</span>
+            <span >private</span> <span >int</span> <span >kolor</span><span >;</span> <span >// tak naprawdę do przechowywania(tworzenia)</span>
+                               <span >// koloru używa się zazwyczaj obiektu java.awt.Color</span>
+            <span >...</span>
+        <span >}</span>
+        </pre></div>
+
+        <form>
+            <div style="max-width: 400px;">
+            </div>
+            <div style="padding-bottom: 18px;font-size : 24px;">zapisz się na listę mailingową</div>
+            <div style="display: flex; padding-bottom: 18px;max-width : 450px;">
+            <div style=" margin-left: 0; margin-right: 1%; width: 49%;">Imię<span style="color: red;"> *</span><br/>
+            <input type="text" id="data_2" name="data_2" style="max-width: 100%;" />
+            </div>
+            <div style=" margin-left: 1%; margin-right: 0; width: 49%;">Nazwisko<span style="color: red;"> *</span><br/>
+            <input type="text" id="data_3" name="data_3" style="max-width: 100%;" />
+            </div>
+            </div><div style="padding-bottom: 18px;">Email<span style="color: red;"> *</span><br/>
+            <input type="text" id="data_4" name="data_4" style="max-width : 450px;" />
+            </div>
+            <div style="padding-bottom: 18px;">komentarz<br/>
+            <textarea id="data_5" false name="data_5" style="max-width : 450px;" rows="6"></textarea>
+            </div>
+            <div style="padding-bottom: 18px;"><br/>
+            <span><input type="checkbox" id="data_6_0" name="data_6" value="I agree to Terms of Service and Privacy Policy"/> zgadzam się z polityką prywatności</span><br/>
+            </div>
+            <div style="padding-bottom: 18px;"><input name="skip_Submit" value="Subscribe" type="submit"/></div>
+            <div>
+            </div>
+            </form>
+            
+        
+
+</body>
+</html>
+
