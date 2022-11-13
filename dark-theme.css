@@ -10,7 +10,12 @@ h4.color_frame {
     text-align: center;
 }
 
+body {
+    background-color: rgb(24, 25, 26);
+  }
+
 h1,h2,h3,h4.center {
+	color:  rgb(228, 230, 235);
     max-width:2000px;
     margin-top:46px;
     padding-right: 5%;
@@ -23,18 +28,40 @@ h1,h2,h3,h4.center {
 p,ol,h3.padding {
     max-width:2000px;
     padding-left: 5%;
+	color:  rgb(176, 179, 184);
     padding-right: 5%;
 }
 h3.padding {
     padding-left: 5%;
     padding-right: 5%;
 }
+
 ol.padding {
     padding-left: 10%;
 }
-
+ul,li.colorsUl {
+	color:  rgb(176, 179, 184);
+}
 table, th, td {    
-    border:3px solid rgb(255, 0, 0);
+    border:3px solid rgb(55, 56, 57);
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+button.btn_style {
+  background-color: rgb(176, 179, 184);
+  border-radius: 8px;
+  border-width: 0;
+  color:  rgb(55, 56, 57);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  touch-action: manipulation;
 }

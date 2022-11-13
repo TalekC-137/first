@@ -10,6 +10,9 @@ h4.color_frame {
     text-align: center;
 }
 
+body {
+    background-color: rgb(255, 255, 255);
+  }
 h1,h2,h3,h4.center {
     max-width:2000px;
     margin-top:46px;
@@ -38,3 +41,21 @@ table, th, td {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+button.btn_style {
+    background-color:  rgb(55, 56, 57);
+    border-radius: 8px;
+    border-width: 0;
+	color:  rgb(176, 179, 184);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    touch-action: manipulation;
+  }

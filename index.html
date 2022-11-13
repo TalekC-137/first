@@ -46,11 +46,19 @@
         Cechy
     </h4>
 
-    <button onclick="toggleTheme()">
-        TOGGLE Dark
+    <button class="btn_style" onclick="toggleTheme()">
+        TOGGLE THEME
     </button>  
+
+     <!--
+
+        kolor tła się cachuje więc po kilku próbach i odświeżeniach kolor tła może się nie zmianiać, wystarczy wtedy zmienić 
+        minimalnie wartość koloru tła (linijka 14 w dark-theme.css) problem ten naprawię przy kolejnym projekcie
+
+     -->
+
     <script>
-        var counter = 0;
+    var counter = 0;
         function toggleTheme() {
             counter++;
             var sheets = document
@@ -67,7 +75,9 @@
     <p style="font-family: helvetica;" class="padding"> Programowanie obiektowe wykorzystuje obiekty, ale nie wszystkie powiązane techniki i struktury są obsługiwane bezpośrednio w    językach,  które twierdzą, że obsługują OOP. Cechy wymienione poniżej są jednak powszechne wśród języków uważanych za silnie zorientowane na klasę i obiekt (lub wielo-paradygmatowe z obsługą OOP)</p>
    
 
-<ul><li>Zmienne klasy - należą do całości klasy, jest tylko jedna kopia każdej</li>
+<ul class="colorsUl">
+    
+    <li>Zmienne klasy - należą do całości klasy, jest tylko jedna kopia każdej</li>
     <li>Instancje zmiennych lub atrybutów - dane, które należą do indywidualnego obiektu, każdy obiekt ma ich własną kopię</li>
     <li>Zmienne składowe - odwołują się zarówno do klas oraz zmiennych instancji, które są zdefiniowane przez konkretne klasy</li>
     <li>Metody w klasach - należą do całości klas i mają dostęp tylko do zmiennych klas oraz wprowadzanych w wywoływaniu procedur</li>
@@ -81,7 +91,7 @@
 
 
     <h5 class="center">
-        <a href="test.html"> zobacz czsym charakteryzuje się Java</a>
+        <a href="java.html"> zobacz czym charakteryzuje się Java</a>
     </h5>
 
     <h3 class="padding">
