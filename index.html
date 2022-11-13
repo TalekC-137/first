@@ -4,15 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="page.css" />
+    <link rel="stylesheet" type="text/css" href="light-theme.css" />
+
+    <style>
+        body {
+          padding: 25px;
+          background-color: white;
+          color: black;
+          font-size: 25px;
+        }
+        
+        .dark-mode {
+          background-color: black;
+          color: white;
+        }
+        </style>
+
 
     <title>projekt 1</title>
-
+    <!--https://github.com/TalekC-137/first-->
 </head>
-<body>
-    
-    <h4 class="center">
-        Programowanie obiekssstowe
+<body >
+
+        <!--TODO: change subject to space realated, implement dark theme with pics of dark sky and white with some day light pics
+        or very bright space bs-->
+
+    <h3 class="center">
+        Programowanie obiektowe
     </h3>
    
 <p class="padding">
@@ -27,6 +45,24 @@
     <h4 class="color_frame">
         Cechy
     </h4>
+
+    <button onclick="toggleTheme()">
+        TOGGLE Dark
+    </button>  
+    <script>
+        var counter = 0;
+        function toggleTheme() {
+            counter++;
+            var sheets = document
+                .getElementsByTagName('link');
+            if(counter%2 == 1){
+               sheets[0].href = "dark-theme.css";
+            }else{
+                sheets[0].href = "light-theme.css";
+            }
+        }
+    </script>
+
 
     <p style="font-family: helvetica;" class="padding"> Programowanie obiektowe wykorzystuje obiekty, ale nie wszystkie powiązane techniki i struktury są obsługiwane bezpośrednio w    językach,  które twierdzą, że obsługują OOP. Cechy wymienione poniżej są jednak powszechne wśród języków uważanych za silnie zorientowane na klasę i obiekt (lub wielo-paradygmatowe z obsługą OOP)</p>
    
@@ -45,7 +81,7 @@
 
 
     <h5 class="center">
-        <a href="java.html"> zobacz czym charakteryzuje się Java</a>
+        <a href="test.html"> zobacz czsym charakteryzuje się Java</a>
     </h5>
 
     <h3 class="padding">
@@ -88,6 +124,3 @@
 
 </body>
 </html>
-
-
-
