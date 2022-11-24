@@ -6,21 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="light-theme.css" />
 
-    <style>
-        body {
-          padding: 25px;
-          background-color: white;
-          color: black;
-          font-size: 25px;
-        }
-        
-        .dark-mode {
-          background-color: black;
-          color: white;
-        }
-        </style>
-
-
     <title>projekt 1</title>
     <!--https://github.com/TalekC-137/first-->
 </head>
@@ -50,12 +35,10 @@
         TOGGLE THEME
     </button>  
 
-     <!--
-
-        kolor tła się cachuje więc po kilku próbach i odświeżeniach kolor tła może się nie zmianiać, wystarczy wtedy zmienić 
-        minimalnie wartość koloru tła (linijka 14 w dark-theme.css) problem ten naprawię przy kolejnym projekcie
-
-     -->
+    <div class="clearfix">
+        <span class="float-right-sm">zmiana koloru dla okna mniejszego niż =&lt;768px</span><br>
+        <span class="float-right-lg">zmiana koloru dla okna mniejszego niż =&gt;769px</span><br>
+      </div>
 
     <script>
     var counter = 0;

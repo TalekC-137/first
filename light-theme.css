@@ -59,3 +59,29 @@ button.btn_style {
     vertical-align: baseline;
     touch-action: manipulation;
   }
+
+.float-right-sm {
+  background-color: yellow;
+}
+
+.float-right-lg {
+  background-color: pink;
+}
+
+@media (max-width: 768px) {
+  .float-right-sm {
+    float: right;
+  }
+}
+
+@media (min-width: 769px) {
+  .float-right-lg {
+    float: right;
+  }
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
