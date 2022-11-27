@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="light-theme.css" />
     <title>Java</title>
 
     <style>
@@ -20,6 +21,42 @@
 </head>
 <body>
     
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button class="btn_style" onclick="toggleTheme()">
+            TOGGLE THEME
+        </button> 
+        <a href="index.html">Main</a>
+        <a href="java.html">Java</a>
+        <a href="python.html">Python</a>
+      </div>
+      
+      <span style="font-size:30px;cursor:pointer;color: rgb(29, 138, 182);" onclick="openNav()">&#9776; open</span>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+      
+      <script>
+        var counter = 0;
+            function toggleTheme() {
+                counter++;
+                var sheets = document
+                    .getElementsByTagName('link');
+                if(counter%2 == 1){
+                   sheets[0].href = "dark-theme.css";
+                }else{
+                    sheets[0].href = "light-theme.css";
+                }
+            }
+        </script>
+
     <h3>
         Java
     </h3>

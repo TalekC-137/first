@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="light-theme.css" />
+
+    <title>python</title>
+</head>
+<body >
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <button class="btn_style" onclick="toggleTheme()">
+                TOGGLE THEME
+            </button> 
+            <a href="index.html">Main</a>
+            <a href="java.html">Java</a>
+            <a href="python.html">Python</a>
+          </div>
+          
+          <span style="font-size:30px;cursor:pointer;color: rgb(29, 138, 182);" onclick="openNav()">&#9776; open</span>
+          
+          <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+
+          <script>
+            var counter = 0;
+                function toggleTheme() {
+                    counter++;
+                    var sheets = document
+                        .getElementsByTagName('link');
+                    if(counter%2 == 1){
+                       sheets[0].href = "dark-theme.css";
+                    }else{
+                        sheets[0].href = "light-theme.css";
+                    }
+                }
+            </script>
+
+<script>
+    var counter = 0;
+        function toggleTheme() {
+            counter++;
+            var sheets = document
+                .getElementsByTagName('link');
+            if(counter%2 == 1){
+               sheets[0].href = "dark-theme.css";
+            }else{
+                sheets[0].href = "light-theme.css";
+            }
+        }
+    </script>
+
+    <h3 class="center">
+        Python
+    </h3>
+   
+<p class="padding">
+    Python - język programowania wysokiego poziomu ogólnego przeznaczenia, o rozbudowanym pakiecie bibliotek standardowych,
+     którego ideą przewodnią jest czytelność i klarowność kodu źródłowego.
+      Jego składnia cechuje się przejrzystością i zwięzłością.
+
+    Python wspiera różne paradygmaty programowania: obiektowy,
+     imperatywny oraz w mniejszym stopniu funkcyjny. Posiada w pełni dynamiczny system typów i automatyczne zarządzanie pamięcią,
+      będąc w tym podobnym do języków Perl, Ruby, Scheme czy Tcl. Podobnie jak inne języki dynamiczne jest często używany jako 
+      język skryptowy. Interpretery Pythona są dostępne na wiele systemów operacyjnych.
+    
+    Python rozwijany jest jako projekt Open Source zarządzany przez Python Software Foundation,
+     która jest organizacją non-profit. Standardową implementacją języka jest CPython (napisany w C), ale istnieją też inne, np. Jython (napisany w Javie), CLPython napisany w Common Lisp, IronPython (na platformę .NET) i PyPy (napisany w Pythonie, zob. bootstrap).
+  
+  
+     <h4 class="color_frame">
+        Cechy
+    </h4>
+
+<ul class="colorsUl">
+    
+    <li>Programy składają się z modułów </li>
+    <li>Moduły zawierają instrukcje </li>
+    <li>Instrukcje zawierają wyrażenia  </li>
+    <li>Wyrażenia tworzą i przetwarzają obiekty </li>
+</ul>
+    <h4 class="color_frame">
+        wady
+    </h4>
+
+    <p> Chyba jedyną wadą Pythona (nie zawsze istotną) jest to, 
+        że prędkość wykonywania może nie zawsze być porównywalna z prędkością języków kompilowanych,
+         takich jak C czy C++. W razie potrzeby można zastosować kilka sposobów przyspieszenia kodu pythonowego: </p>  
+
+<ul class="colorsUl">
+    <li>wykorzystanie pamięci podręcznej (caching)</li>
+    <li>kompilacja "just in time" z Numba (styl języka Julia)</li>
+    <li>kompilacja kodu za pomocą kompilatora Cython, ewentualnie ze statycznym typowaniem  </li>
+    <li>obliczenia numeryczne z wykorzystaniem operacji wektorowych z NumPy </li>
+</ul>
+
+</body>
+</html>
