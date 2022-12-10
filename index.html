@@ -14,6 +14,30 @@
         <!--TODO: change subject to space realated, implement dark theme with pics of dark sky and white with some day light pics
         or very bright space bs-->
 
+
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <button class="btn_style" onclick="toggleTheme()">
+                TOGGLE THEME
+            </button> 
+              <a href="index.html">Main</a>
+        <a href="java.html">Java</a>
+        <a href="python.html">Python</a>
+          </div>
+          
+          <span style="font-size:30px;cursor:pointer;color: rgb(29, 138, 182);" onclick="openNav()">&#9776; open</span>
+          
+          <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+
     <h3 class="center">
         Programowanie obiektowe
     </h3>
@@ -30,15 +54,12 @@
     <h4 class="color_frame">
         Cechy
     </h4>
-
-    <button class="btn_style" onclick="toggleTheme()">
-        TOGGLE THEME
-    </button>  
-
+ <!--nie wiem co dodać ze zmianą koloru przy zmianie okna więc dodaję to, jak na coś wpadnę to dodam przy kolejny projekcie-->
     <div class="clearfix">
         <span class="float-right-sm">zmiana koloru dla okna mniejszego niż =&lt;768px</span><br>
         <span class="float-right-lg">zmiana koloru dla okna mniejszego niż =&gt;769px</span><br>
       </div>
+
 
     <script>
     var counter = 0;
