@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="light-theme.css" />
+
+    <title>kalkulator</title>
+</head>
+
+<style>
+    body {
+      font-size: 18px;
+    }
+
+    div {
+      margin: 10px 0;
+    }
+
+    select,
+    input {
+      font-size: 18px;
+      padding: 5px 10px;
+    }
+
+    table {
+    border-collapse: collapse;
+    margin: auto;
+
+  }
+
+    td {
+        border: 1px solid black;
+        padding: 20px;
+        text-align: center;
+        font-size: 30px;
+
+        width: 60px;
+        height: 60px;
+    }
+
+    #message {
+    font-size: 40px;
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  </style>
+
+
+<body >
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <button class="btn_style" onclick="toggleTheme()">
+                TOGGLE THEME
+            </button> 
+            <a href="index.html">Main</a>
+            <a href="java.html">Java</a>
+            <a href="python.html">Python</a>
+            <a href="calculator.html">kalkulator walut</a>
+          </div>
+          
+          <span style="font-size:30px;cursor:pointer;color: rgb(29, 138, 182);" onclick="openNav()">&#9776; open</span>
+          
+          <h4 class="color_frame">
+            kalkulator walut
+        </h4>
+
+          <div>
+            <label for="from">From:</label>
+            <select id="from">
+              <option>PLN</option>
+              <option>USD</option>
+              <option>EUR</option>
+              <option>JPY</option>
+              <option>GBP</option>
+              <option>CNY</option>
+              <option>AUD</option>
+              <option>CHF</option>
+            </select>
+          </div>
+        
+          <div>
+            <label for="to">To:</label>
+            <select id="to">
+              <option>PLN</option>
+              <option>USD</option>
+              <option>EUR</option>
+              <option>JPY</option>
+              <option>GBP</option>
+              <option>CNY</option>
+              <option>AUD</option>
+              <option>CHF</option>
+            </select>
+          </div>
+        
+          <div>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" value="1">
+          </div>
+        
+          <div id="result">
+            Result: <span id="converted-amount"></span>
+          </div>
+
+          <h4 class="color_frame">
+            kółko i krzyżyk
+        </h4>
+    
+
+        <h1>Tic Tac Toe</h1>
+        <table>
+          <tr>
+            <td id="cell-0"></td>
+            <td id="cell-1"></td>
+            <td id="cell-2"></td>
+          </tr>
+          <tr>
+            <td id="cell-3"></td>
+            <td id="cell-4"></td>
+            <td id="cell-5"></td>
+          </tr>
+          <tr>
+            <td id="cell-6"></td>
+            <td id="cell-7"></td>
+            <td id="cell-8"></td>
+          </tr>
+        </table>
+        <p id="message"></p>
+
+        <script>
+
+      let currentPlayer = "X";
+      let gameOver = false;
+
+      function switchPlayers() {
+        if (currentPlayer === "X") {
+          currentPlayer = "O";
+        } else {
+          currentPlayer = "X";
+        }
+      }
+
+      function handleMove(event) {
+        if (gameOver) return; 
+
+        let cell = event.target;
+        if (cell.innerHTML !== "") return; 
+
+        cell.innerHTML = currentPlayer;
+
+        if (isGameWon()) {
+          gameOver = true;
+          document.getElementById("message").innerHTML =
+            currentPlayer + " wygrał grę!";
+        } else if (isGameDrawn()) {
+          gameOver = true;
+          document.getElementById("message").innerHTML = "remis, remis, remis!";
+        } else {
+          switchPlayers();
+        }
+      }
+
+      function isGameWon() {
+        for (let i = 0; i <= 6; i += 3) {
+            if (
+            document.getElementById("cell-" + i).innerHTML === currentPlayer &&
+            document.getElementById("cell-" + (i + 1)).innerHTML === currentPlayer &&
+            document.getElementById("cell-" + (i + 2)).innerHTML === currentPlayer
+            ) {
+            return true;
+            }
+        }
+
+        for (let i = 0; i <= 2; i++) {
+            if (
+            document.getElementById("cell-" + i).innerHTML === currentPlayer &&
+            document.getElementById("cell-" + (i + 3)).innerHTML === currentPlayer &&
+            document.getElementById("cell-" + (i + 6)).innerHTML === currentPlayer
+            ) {
+            return true;
+            }
+        }
+
+        return false;
+        }
+
+
+        function isGameDrawn() {
+        for (let i = 0; i < 9; i++) {
+          if (document.getElementById("cell-" + i).innerHTML === "") {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      for (let i = 0; i < 9; i++) {
+        document.getElementById("cell-" + i).addEventListener("click", handleMove);
+      }
+
+        </script>
+
+          <script>
+            const currencies = ['PLN', 'USD', 'EUR', 'JPY', 'GBP', 'CNY', 'AUD', 'CHF'];
+        
+            const rates = {
+              PLN: 1,
+              USD: 3.75,
+              EUR: 4.25,
+              JPY: 0.034,
+              GBP: 4.75,
+              CNY: 0.56,
+              AUD: 2.84,
+              CHF: 3.98
+            };
+        
+            function convertCurrency(from, to, amount) {
+              return (amount * rates[to]) / rates[from];
+            }
+        
+            const fromSelect = document.getElementById('from');
+            const toSelect = document.getElementById('to');
+            const amountInput = document.getElementById('amount');
+            const convertedAmount = document.getElementById('converted-amount');
+        
+            function updateResult() {
+              const fromCurrency = fromSelect.value;
+              const toCurrency = toSelect.value;
+              const amount = amountInput.value;
+              convertedAmount.innerHTML = convertCurrency(fromCurrency, toCurrency, amount);
+            }
+        
+            fromSelect.addEventListener('change', updateResult);
+            toSelect.addEventListener('change', updateResult);
+            amountInput.addEventListener('input', updateResult);
+          
+              updateResult();
+            </script>
+
+
+          <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+
+          <script>
+            var counter = 0;
+                function toggleTheme() {
+                    counter++;
+                    var sheets = document
+                        .getElementsByTagName('link');
+                    if(counter%2 == 1){
+                       sheets[0].href = "dark-theme.css";
+                    }else{
+                        sheets[0].href = "light-theme.css";
+                    }
+                }
+            </script>
+
+<script>
+    var counter = 0;
+        function toggleTheme() {
+            counter++;
+            var sheets = document
+                .getElementsByTagName('link');
+            if(counter%2 == 1){
+               sheets[0].href = "dark-theme.css";
+            }else{
+                sheets[0].href = "light-theme.css";
+            }
+        }
+    </script>
+</body>
+</html>
